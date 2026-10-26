@@ -1,0 +1,39 @@
+
+# Secrets
+.env
+.env.*
+
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env_venv/
+
+# Local database and downloaded data
+Data/ChromaDB/
+Data/Uploads/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Model caches and temporary files
+.cache/
+hf_cache/
+.pytest_cache/
+.mypy_cache/
+
+# IDE and OS
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local databases and uploaded files
+Data/ChromaDB/
+Data/Uploads/
+
+# Temporary testing files
+Backend/llm_test.py
+test.ipynb

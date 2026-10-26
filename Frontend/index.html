@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PolicyPilot AI Agent</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-logo">
+                    <div class="robot-face">
+                        <span class="robot-eye"></span>
+                        <span class="robot-eye"></span>
+                    </div>
+                </div>
+
+                <div>
+                    <h1>Policy<span>Pilot</span></h1>
+                    <p>Airbnb Policy Assistant</p>
+                </div>
+            </div>
+
+            <nav class="navigation">
+
+                <button class="nav-item active">
+                    <span class="nav-icon">💬</span>
+                    Chat
+                </button>
+
+                <button class="nav-item">
+                    <span class="nav-icon">▱</span>
+                    Policy Categories
+                </button>
+
+                <button class="nav-item">
+                    <span class="nav-icon">ⓘ</span>
+                    About
+                </button>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- Main Application -->
+        <main class="main-content">
+
+            <!-- Top Header -->
+            <header class="top-header">
+
+                <div class="airbnb-brand">
+                    <span class="airbnb-symbol">△</span>
+                    <strong>airbnb</strong>
+
+                    <span class="divider"></span>
+
+                    <span>Policy Information Assistant</span>
+                </div>
+
+                <div class="theme-control">
+
+                    <span class="theme-icon">☀</span>
+
+                    <button
+                        id="themeToggle"
+                        class="theme-toggle"
+                        aria-label="Toggle dark mode"
+                    >
+                        <span></span>
+                    </button>
+
+                    <span class="theme-icon">☾</span>
+
+                </div>
+
+            </header>
+
+
+            <!-- Main Layout -->
+            <div class="content-layout">
+
+                <!-- Center -->
+                <section class="chat-area">
+
+                    <!-- Hero -->
+                    <section class="hero">
+
+                        <div class="hero-robot">
+                            <div class="large-robot">
+                                <div class="robot-head">
+                                    <div class="robot-screen">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+
+                                <div class="robot-body">
+                                    <div class="robot-logo">✦</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hero-content">
+
+                            <h2>
+                                Hello! I'm
+                                <span>PolicyPilot</span>
+                            </h2>
+
+                            <p>
+                                Your AI assistant for Airbnb policies.
+                                Ask me anything about refunds,
+                                cancellations, privacy, and more.
+                            </p>
+
+                        </div>
+
+
+                        <!-- Features -->
+                        <div class="features">
+
+                            <div class="feature">
+                                <div class="feature-icon">✓</div>
+
+                                <div>
+                                    <strong>Accurate Information</strong>
+                                    <small>
+                                        Based on official Airbnb policies
+                                    </small>
+                                </div>
+                            </div>
+
+                            <div class="feature">
+                                <div class="feature-icon">ϟ</div>
+
+                                <div>
+                                    <strong>Fast Answers</strong>
+                                    <small>
+                                        Get help in seconds
+                                    </small>
+                                </div>
+                            </div>
+
+                            <div class="feature">
+                                <div class="feature-icon">✦</div>
+
+                                <div>
+                                    <strong>Easy to Use</strong>
+                                    <small>
+                                        Just ask in plain language
+                                    </small>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- Quick Questions -->
+                    <section class="quick-section">
+
+                        <h3>
+                            <span>ϟ</span>
+                            Quick Questions
+                        </h3>
+
+                        <div class="quick-questions">
+
+                            <button
+                                class="question-card"
+                                data-question="What is Airbnb's refund policy for cancelled bookings?"
+                            >
+                                <span class="question-icon">⟳</span>
+
+                                <span class="question-text">
+                                    What is Airbnb's refund policy
+                                    for cancelled bookings?
+                                </span>
+
+                                <span class="question-arrow">→</span>
+                            </button>
+
+
+                            <button
+                                class="question-card"
+                                data-question="What does Airbnb's privacy policy say about personal information?"
+                            >
+                                <span class="question-icon">♙</span>
+
+                                <span class="question-text">
+                                    What does Airbnb's privacy policy
+                                    say about personal information?
+                                </span>
+
+                                <span class="question-arrow">→</span>
+                            </button>
+
+
+                            <button
+                                class="question-card"
+                                data-question="What is Airbnb's cancellation policy for homes?"
+                            >
+                                <span class="question-icon">⌂</span>
+
+                                <span class="question-text">
+                                    What is Airbnb's cancellation
+                                    policy for homes?
+                                </span>
+
+                                <span class="question-arrow">→</span>
+                            </button>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- Conversation -->
+                    <section class="conversation">
+
+                        <div
+                            id="conversationContent"
+                            class="conversation-content"
+                        >
+
+                            <div class="empty-state">
+
+                                <div class="empty-icon">
+                                    <span>▰</span>
+                                    <span>▰</span>
+                                </div>
+
+                                <h3>Start a conversation</h3>
+
+                                <p>
+                                    Choose a quick question above or type
+                                    your own question in the input box below.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- Input -->
+                    <div class="input-wrapper">
+
+                        <div class="input-box">
+
+                            <button
+                                class="attach-button"
+                                aria-label="Attachment"
+                            >
+                                ⛓
+                            </button>
+
+                            <input
+                                id="questionInput"
+                                type="text"
+                                placeholder="Type your question about Airbnb policies..."
+                                autocomplete="off"
+                            />
+
+                            <button
+                                id="sendButton"
+                                class="send-button"
+                            >
+                                <span>➤</span>
+                                Send
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Right Panel -->
+                <aside class="right-panel">
+
+                    <!-- Property Image -->
+                    <div class="property-image">
+                        <div class="property-overlay">
+                            <span>△</span>
+                        </div>
+                    </div>
+
+
+                    <!-- About -->
+                    <section class="info-section">
+
+                        <h2>About Airbnb Policies</h2>
+
+                        <p>
+                            PolicyPilot helps you get quick and accurate
+                            answers from Airbnb's official policy documents,
+                            including:
+                        </p>
+
+                        <ul>
+                            <li>Refund Policy</li>
+                            <li>Cancellation Policy</li>
+                            <li>Privacy Policy</li>
+                            <li>Terms of Service</li>
+                            <li>and more...</li>
+                        </ul>
+
+                    </section>
+
+
+                    <!-- Categories -->
+                    <section class="categories-card">
+
+                        <h3>
+                            <span>▱</span>
+                            Available Categories
+                        </h3>
+
+                        <div class="category">
+                            <span>⟳</span>
+                            Refunds
+                        </div>
+
+                        <div class="category">
+                            <span>▣</span>
+                            Cancellations
+                        </div>
+
+                        <div class="category">
+                            <span>♙</span>
+                            Privacy
+                        </div>
+
+                        <div class="category">
+                            <span>▤</span>
+                            Terms & Conditions
+                        </div>
+
+                        <div class="category">
+                            <span>⌂</span>
+                            Homes & Hosts
+                        </div>
+
+                        <div class="category">
+                            <span>◉</span>
+                            Guest Support
+                        </div>
+
+                    </section>
+
+
+                    <!-- Demo Notice -->
+                    <div class="demo-notice">
+
+                        <span>ⓘ</span>
+
+                        <p>
+                            This is a demo project using publicly
+                            available Airbnb policy documents.
+                        </p>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
