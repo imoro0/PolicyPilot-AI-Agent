@@ -255,36 +255,96 @@
                     </section>
 
 
-                    <!-- Input -->
-                    <div class="input-wrapper">
+                   
+            <!-- Input -->
+            <div class="input-wrapper">
+                <div class="input-box">
 
-                        <div class="input-box">
+                    <!-- Image upload: existing attachment design -->
+                    <button
+                        type="button"
+                        id="imageButton"
+                        class="attach-button"
+                        aria-label="Upload an image"
+                        title="Upload image"
+                    >🖼</button>
 
-                            <button
-                                class="attach-button"
-                                aria-label="Attachment"
-                            >
-                                ⛓
-                            </button>
+                    <input
+                        type="file"
+                        id="imageInput"
+                        accept="image/jpeg,image/png,image/webp,image/gif"
+                        hidden
+                    />
 
-                            <input
-                                id="questionInput"
-                                type="text"
-                                placeholder="Type your question about Airbnb policies..."
-                                autocomplete="off"
-                            />
+                    <!-- Existing text input -->
+                    <input
+                        id="questionInput"
+                        type="text"
+                        placeholder="Type your question about Airbnb policies..."
+                        autocomplete="off"
+                    />
 
-                            <button
-                                id="sendButton"
-                                class="send-button"
-                            >
-                                <span>➤</span>
-                                Send
-                            </button>
+                    <!-- Microphone -->
+                    <button
+                        type="button"
+                        id="voiceButton"
+                        class="attach-button"
+                        aria-label="Record voice question"
+                        title="Record voice question"
+                    >🎙</button>
 
-                        </div>
+                    <!-- Existing send button -->
+                    <button
+                        id="sendButton"
+                        class="send-button"
+                        type="button"
+                    >
+                        <span>➤</span>
+                        Send
+                    </button>
+                </div>
 
-                    </div>
+                <!-- Selected image preview -->
+                <div id="imagePreview" hidden>
+                    <span id="imageFileName"></span>
+                    <button type="button" id="removeImageButton" aria-label="Remove image">✕</button>
+                </div>
+
+                <p id="mediaStatus" role="status" hidden></p>
+            </div>
+
+            
+           
+            <div class="file-upload-area">
+                <input
+                    type="file"
+                    id="tabularFile"
+                    accept=".csv,.xlsx,.xls,.pdf"
+                    hidden
+                >
+
+                <button
+                    type="button"
+                    id="fileUploadBtn"
+                    title="Upload file"
+                >
+                    📎
+                </button>
+
+                <span id="selectedFileName">
+                    No file selected
+                </span>
+
+                <button
+                    type="button"
+                    id="removeFileBtn"
+                    title="Remove selected file"
+                    hidden
+                >
+                    ×
+                </button>
+            </div>
+
 
                 </section>
 

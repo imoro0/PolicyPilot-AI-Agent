@@ -1,0 +1,8 @@
+
+APP_NAME=PolicyPilot AI Agent
+APP_ENV=development
+GEMINI_API_KEY=
+LANGSMITH_TRACING=false
+LANGSMITH_API_KEY=
+LANGSMITH_PROJECT=PolicyPilot-AI-Agent
+LANGSMITH_ENDPOINT=https://api.smith.langchain.com

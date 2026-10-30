@@ -1069,3 +1069,56 @@ body.dark-theme .theme-toggle span {
         grid-row: auto;
     }
 }
+
+.input-box #imageButton.attach-button {
+    appearance: none;
+    -webkit-appearance: none;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--surface-soft);
+    color: var(--muted);
+    font-size: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.input-box #imageButton.attach-button:hover {
+    background: var(--surface-hover);
+}
+
+@media (max-width: 600px) {
+    .input-box #imageButton.attach-button {
+        width: 34px;
+        height: 34px;
+        font-size: 18px;
+    }
+}
+
+.file-upload-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+}
+
+#fileUploadBtn {
+    border: none;
+    background: transparent;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#selectedFileName {
+    font-size: 13px;
+    color: var(--text-secondary, #888);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
